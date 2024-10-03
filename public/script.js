@@ -6,11 +6,14 @@ function appendNumber(number) {
 }
 
 function appendOperator(operator) {
-  // Prevent adding operators next to each other or at the beginning
+  // Check if the last character is an operator
   if (input === '' || ['+', '-', '*', '/'].includes(input.slice(-1))) {
-    return;
+    // If it's an operator, replace the last operator with the new one
+    input = input.slice(0, -1) + operator;
+  } else {
+    // Otherwise, append the operator as normal
+    input += operator;
   }
-  input += operator;
   document.getElementById('result').value = input;
 }
 
@@ -21,13 +24,12 @@ function clearScreen() {
 
 function calculate() {
   try {
-    // Calculate the result and display it
     if (input) {
-      input = eval(input).toString(); // eval() calculates the math expression
+      input = eval(input).toString(); // Evaluate the expression and convert to string
       document.getElementById('result').value = input;
     }
   } catch (error) {
-    // If there's an error (e.g., invalid input), show "Error" and reset input
+    // If there's an error (like invalid input), show "Error"
     document.getElementById('result').value = 'Error';
     input = '';
   }

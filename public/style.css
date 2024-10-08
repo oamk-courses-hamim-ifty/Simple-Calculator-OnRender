@@ -36,15 +36,15 @@ input {
 }
 
 h1 {
-  margin-top: 30px; /* More space above and below the header */
-  font-size: 2em; /* Increased font size for the title */
+  margin-top: 30px;
+  font-size: 2em;
   color: white;
 }
 
 p {
   color: white;
-  margin-bottom: 30px; /* More space between the title and the calculator */
-  font-size: 1.2em; /* Increased font size for the instructions */
+  margin-bottom: 30px;
+  font-size: 1.2em;
 }
 
 .buttons {

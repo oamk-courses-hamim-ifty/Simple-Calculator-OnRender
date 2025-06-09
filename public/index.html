@@ -3,34 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Calculator</title>
+  <title>Advanced Scientific Calculator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Calculator</h1>
-    <p>Kindly use the mouse for entering numbers and operations.</p>
+    <h1>Scientific Calculator</h1>
+    <p>Supports basic and scientific functions</p>
 
     <div class="calculator">
       <input type="text" id="result" readonly>
       <div class="buttons">
-        <button onclick="clearScreen()">C</button>
-        <button onclick="appendOperator('+')">+</button>
-        <button onclick="appendOperator('-')">-</button>
-        <button onclick="appendOperator('*')">x</button>
-        <button onclick="appendOperator('/')">/</button>
-        <button onclick="appendNumber('7')">7</button>
-        <button onclick="appendNumber('8')">8</button>
-        <button onclick="appendNumber('9')">9</button>
-        <button onclick="appendNumber('4')">4</button>
-        <button onclick="appendNumber('5')">5</button>
-        <button onclick="appendNumber('6')">6</button>
-        <button onclick="appendNumber('1')">1</button>
-        <button onclick="appendNumber('2')">2</button>
-        <button onclick="appendNumber('3')">3</button>
-        <button onclick="appendNumber('0')">0</button>
-        <button onclick="appendNumber('.')">.</button>
-        <button onclick="calculate()" class="equals">=</button>
+        <!-- Scientific Functions -->
+        <button class="function" onclick="appendFunction('sin')">sin</button>
+        <button class="function" onclick="appendFunction('cos')">cos</button>
+        <button class="function" onclick="appendFunction('tan')">tan</button>
+        <button class="function" onclick="appendFunction('log')">log</button>
+        <button class="function" onclick="appendFunction('exp')">eˣ</button>
+
+        <button class="function" onclick="appendFunction('sqrt')">√</button>
+        <button class="function" onclick="appendFunction('pow2')">x²</button>
+        <button class="control" onclick="clearScreen()">C</button>
+        <button class="operator" onclick="appendOperator('/')">÷</button>
+        <button class="operator" onclick="appendOperator('*')">×</button>
+
+        <!-- Digits and Basic Operators -->
+        <button class="number" onclick="appendNumber('7')">7</button>
+        <button class="number" onclick="appendNumber('8')">8</button>
+        <button class="number" onclick="appendNumber('9')">9</button>
+        <button class="operator" onclick="appendOperator('-')">−</button>
+
+        <button class="number" onclick="appendNumber('4')">4</button>
+        <button class="number" onclick="appendNumber('5')">5</button>
+        <button class="number" onclick="appendNumber('6')">6</button>
+        <button class="operator" onclick="appendOperator('+')">+</button>
+
+        <button class="number" onclick="appendNumber('1')">1</button>
+        <button class="number" onclick="appendNumber('2')">2</button>
+        <button class="number" onclick="appendNumber('3')">3</button>
+        <button class="equals" onclick="calculate()">=</button>
+
+        <button class="number" onclick="appendNumber('0')">0</button>
+        <button class="number" onclick="appendNumber('.')">.</button>
       </div>
     </div>
   </div>
